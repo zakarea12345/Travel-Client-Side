@@ -13,7 +13,7 @@ const ManageAllBookings = () => {
         
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `https://secret-plains-62892.herokuapp.com/${key}`
+            const url = `https://secret-plains-62892.herokuapp.com/orders/${key}`
             fetch(url, {
                 method: 'DELETE'
             })
@@ -29,7 +29,7 @@ const ManageAllBookings = () => {
     
     };
     const handleApproveStatus = key => {
-        const url = `http://localhost:5000/orders/${key}`
+        const url = `https://secret-plains-62892.herokuapp.com/orders/${key}`
         fetch(url, {
             method: 'PUT',
             headers: {
